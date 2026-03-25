@@ -1,6 +1,6 @@
 #include "NVector.h"
 
-NVector NVector::operator()(const std::function<int(int)>& f) {
+NVector NVector::operator()(const std::function<int(int)>& f) const {
     NVector result(size);
     //Example:  NVector squares = v([](int x) { return x * x; });
     for (int i = 0; i < size; i++)
