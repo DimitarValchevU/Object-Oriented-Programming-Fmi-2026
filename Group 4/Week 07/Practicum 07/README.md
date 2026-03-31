@@ -7,7 +7,10 @@
 Използвайте този линк https://bytes.usc.edu/cs455saty/m22_Coding-Rocks//extras/ImgProc/PGMViewer/viewer.html за отваряне и преглеждане на PPM и PGM снимки.
 
 Една снимка е последователност от байтове, значи искаме просто да ги прочетем всичките и да ги запазим в някакъв масив, който по-късно да обработим при някоя от трансформациите.
-
+<details>
+  <summary>Message from Serho</summary>
+    Mn dobra zadacha bro
+</details>
 ```c++
 std::ifstream is("inputImage.ppm", std::ios::binary);
 
