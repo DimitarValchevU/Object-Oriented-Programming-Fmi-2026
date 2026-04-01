@@ -71,7 +71,9 @@ out << "P5\n" << width << " " << height << "\n" << maxval << "\n"; // хедър
 
 ```c++
 void add(Image* img); — добавя изображение, като удвоява капацитета при нужда
+void add(Image* img, size_t index); - добавя изображението на посоченото място, ако е свободно
 void remove(size_t index); — премахва изображение по индекс
+void showEmpty(); - показва свободните места в галерията
 void clear(); - премахва всички изображения
 Image* operator[](size_t index); — достъп по индекс с проверка за граници
 size_t size(); — брой изображения
