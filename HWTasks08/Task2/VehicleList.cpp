@@ -111,6 +111,9 @@ VehicleList::VehicleList(VehicleList&& other) noexcept
 
 auto VehicleList::operator=(const VehicleList& other) -> VehicleList&
 {
+	if (this == &other)
+		return *this;
+
 	_free();
 	_copy(other);
 
@@ -119,6 +122,9 @@ auto VehicleList::operator=(const VehicleList& other) -> VehicleList&
 
 auto VehicleList::operator=(VehicleList&& other) noexcept -> VehicleList&
 {
+	if (this == &other)
+		return *this;
+
 	_free();
 	_move(std::move(other));
 

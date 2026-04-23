@@ -57,6 +57,9 @@ Vehicle::Vehicle(Vehicle&& other) noexcept :
 
 auto Vehicle::operator=(const Vehicle& other) -> Vehicle&
 {
+    if (this == &other)
+        return *this;
+
     _free();
 
     m_registration = other.m_registration;
@@ -69,6 +72,9 @@ auto Vehicle::operator=(const Vehicle& other) -> Vehicle&
 
 auto Vehicle::operator=(Vehicle&& other) noexcept -> Vehicle&
 {
+    if (this == &other)
+        return *this;
+
     _free();
 
     m_registration = std::move(other.m_registration);

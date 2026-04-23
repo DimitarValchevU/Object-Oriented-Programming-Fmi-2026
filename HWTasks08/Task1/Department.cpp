@@ -121,6 +121,9 @@ Department::Department(const Department& other)
 
 auto Department::operator=(const Department& other) -> Department&
 {
+	if (this == &other)
+		return *this;
+
 	_free();
 	_copy(other);
 	return *this;
@@ -133,6 +136,9 @@ Department::Department(Department&& other) noexcept
 
 auto Department::operator=(Department&& other) noexcept -> Department&
 {
+	if (this == &other)
+		return *this;
+
 	_free();
 	_move(std::move(other));
 	return *this;
